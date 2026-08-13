@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="Network Calculator — حاسبة شبكات متكاملة تعمل داخل المتصفح: IP و Subnet و CIDR و VLSM و IPv6 وأساسيات الشبكات، بدون خادم وبدون قاعدة بيانات.">
+  <meta name="theme-color" content="#0b1220">
+  <title>حاسبة الشبكات — Network Calculator</title>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%233b82f6'/><circle cx='32' cy='20' r='7' fill='white'/><circle cx='16' cy='46' r='7' fill='white'/><circle cx='48' cy='46' r='7' fill='white'/><path d='M32 27v8M32 35H16v4M32 35h16v4' stroke='white' stroke-width='3' fill='none'/></svg>">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <a class="skip-link" id="skipLink" href="#main">تخطَّ إلى المحتوى الرئيسي</a>
+
+  <header class="topbar">
+    <button type="button" id="navToggle" class="icon-btn nav-toggle" aria-label="القائمة" aria-expanded="false" aria-controls="sidebar">
+      <span class="hamburger-line" aria-hidden="true"></span>
+      <span class="hamburger-line" aria-hidden="true"></span>
+      <span class="hamburger-line" aria-hidden="true"></span>
+    </button>
+
+    <a class="brand" href="#/home">
+      <span class="brand-mark" aria-hidden="true">◉</span>
+      <span class="brand-name" id="brandName">حاسبة الشبكات</span>
+    </a>
+
+    <div class="search-wrap">
+      <input type="search" id="globalSearch" autocomplete="off" role="combobox"
+             aria-expanded="false" aria-controls="searchResults" aria-autocomplete="list"
+             placeholder="ابحث…" aria-label="ابحث">
+      <div class="search-results" id="searchResults" role="listbox" hidden></div>
+    </div>
+
+    <div class="topbar-actions">
+      <button type="button" id="themeToggle" class="icon-btn" aria-label="تبديل المظهر">🌙</button>
+      <button type="button" id="langToggle" class="icon-btn" aria-label="English">EN</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav aria-label="Main">
+        <ul id="navList"></ul>
+      </nav>
+    </aside>
+
+    <div class="overlay" id="overlay" hidden></div>
+
+    <main class="main" id="main" tabindex="-1"></main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <datalist id="cidrList"></datalist>
+
+  <noscript>
+    <p style="padding:20px">هذا الموقع يحتاج إلى تفعيل JavaScript، لأن جميع العمليات الحسابية تتم داخل المتصفح.</p>
+  </noscript>
+
+  <script src="assets/js/net.js"></script>
+  <script src="assets/js/basics.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/tools.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
