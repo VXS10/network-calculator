@@ -3,7 +3,7 @@
 موقع Frontend بالكامل (HTML + CSS + JavaScript ES6) لحساب وتحليل الشبكات داخل المتصفح، بدون خادم أو قاعدة بيانات أو API.
 
 ## التشغيل
-افتح ملف `index.html` مباشرة في المتصفح، أو ارفع محتويات المجلد إلى أي استضافة ثابتة (GitHub Pages / Netlify / Vercel / استضافة عادية).
+افتح ملف `index.html` مباشرة في المتصفح
 
 ## البنية
 
@@ -40,7 +40,7 @@ A fully frontend-based website (HTML + CSS + JavaScript ES6) for calculating and
 
 ## Running
 
-Open the index.html file directly in your browser, or upload the contents of the folder to any static hosting service (GitHub Pages / Netlify / Vercel / regular web hosting).
+Open the index.html file directly in your browser
 
 ## Structure
 index.html
