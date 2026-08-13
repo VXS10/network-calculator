@@ -6,7 +6,7 @@
 افتح ملف `index.html` مباشرة في المتصفح، أو ارفع محتويات المجلد إلى أي استضافة ثابتة (GitHub Pages / Netlify / Vercel / استضافة عادية).
 
 ## البنية
-```
+
 index.html
 assets/css/styles.css      التصميم، الوضع الداكن/الفاتح، RTL/LTR، Responsive
 assets/js/net.js           محرّك الحسابات (IPv4 / IPv6 / VLSM / تحويلات)
@@ -14,7 +14,6 @@ assets/js/tools.js         تعريف الأدوات العشر وحقولها �
 assets/js/i18n.js          قاموس الترجمة (عربي / إنجليزي)
 assets/js/basics.js        محتوى صفحة أساسيات الشبكات
 assets/js/app.js           الواجهة، التوجيه، السجل، التصدير، البحث، الرسم
-```
 
 ## الأدوات
 IP Calculator · Subnet Calculator · CIDR Calculator · VLSM Calculator · IP Range Calculator ·
@@ -35,9 +34,42 @@ Subnet Mask Calculator · Wildcard Calculator · IPv4 Analyzer · IPv6 Calculato
 - حاسبة الشبكات الفرعية تعرض حتى 512 شبكة في الجدول مع تنبيه عند التجاوز.
 - VLSM يرتب المتطلبات تنازليًا ويحاذي الكتل طبيعيًا لمنع التداخل.
 
+## Network Calculator
 
-## الإصلاحات الأخيرة
-- دعم الأرقام العربية والفارسية في المدخلات الرقمية.
-- تنسيق أعداد الإدخال الكبيرة بفواصل الآلاف مع إزالة الفواصل تلقائيًا قبل الحساب.
-- إضافة زر رجوع واضح داخل الصفحات مع ترجمة عربية/إنجليزية.
-- تحسين التعامل مع المدخلات الرقمية في VLSM وحقول CIDR الرقمية.
+A fully frontend-based website (HTML + CSS + JavaScript ES6) for calculating and analyzing networks directly in the browser, with no server, database, or API required.
+
+## Running
+
+Open the index.html file directly in your browser, or upload the contents of the folder to any static hosting service (GitHub Pages / Netlify / Vercel / regular web hosting).
+
+## Structure
+index.html
+
+assets/css/styles.css      Styling, dark/light mode, RTL/LTR, Responsive
+assets/js/net.js           Calculation engine (IPv4 / IPv6 / VLSM / Conversions)
+assets/js/tools.js         Definition of the ten tools, fields, and outputs
+assets/js/i18n.js          Translation dictionary (Arabic / English)
+assets/js/basics.js        Networking Basics page content
+assets/js/app.js           UI, routing, history, export, search, visualization
+
+## Tools
+
+IP Calculator · Subnet Calculator · CIDR Calculator · VLSM Calculator · IP Range Calculator ·
+Subnet Mask Calculator · Wildcard Calculator · IPv4 Analyzer · IPv6 Calculator · Number Converter
+
+## Features
+
+- Network diagram visualization (SVG + ASCII text view)
+- Operation history using LocalStorage (view / copy / delete / clear all)
+- Export options: Copy, CSV, JSON, Print
+- Shareable links containing the input values and automatically recalculating when opened
+- Full input validation with clear error messages
+- Instant search across tools, topics, and terminology (shortcut: /)
+- Arabic/English support with RTL, dark/light mode, and locally saved settings
+- Responsive Mobile-First design + keyboard navigation and screen reader support
+
+## Technical Notes
+
+- /31 networks are treated as point-to-point links, while /32 is treated as a single host with no broadcast address.
+- The Subnet Calculator displays up to 512 networks in the table and shows a warning when this limit is exceeded.
+- VLSM sorts requirements in descending order and naturally aligns blocks to prevent overlapping networks.
